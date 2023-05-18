@@ -1,9 +1,10 @@
-const mongoose1 = require("mongoose");
+const mongoose = require("mongoose");
 
-mongoose1.connect("mongodb://localhost:27017/youtubeRegistration", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true
+mongoose.connect("mongodb://127.0.0.1:27017/youtubeRegistration", {
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    // useCreateIndex: true
+
 }).then(() => {
     console.log(`connection successful`);
 }).catch((e) => {
