@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration and Login Form</title>
+    <style>
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: #f2f2f2;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            display: none;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=email],
+        input[type=tel] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type=radio] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .toggle-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .toggle-icon:hover {
+            color: #fff;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration and Login Form</h2>
+        <div id="registrationForm" class="form-group">
+            <form>
+                <label for="firstName"><b>First Name</b></label>
+                <input type="text" placeholder="Enter your first name" name="firstName" required>
+
+                <label for="lastName"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter your last name" name="lastName" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter your email" name="email" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="password" required>
+
+                <label for="confirmPassword"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm your password" name="confirmPassword" required>
+
+                <label for="gender"><b>Gender</b></label>
+                <input type="radio" name="gender" value="male" checked> Male
+                <input type="radio" name="gender" value="female"> Female
+
+                <label for="phone"><b>Phone</b></label>
+                <input type="tel" placeholder="Enter your phone number" name="phone" required>
+
+                <label for="age"><b>Age</b></label>
+                <input type="number" placeholder="Enter your age" name="age" required>
+
+                <div class="clearfix">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loginForm" class="form-group">
+            <form>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter your name" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter your email" name="email" required>
+
+                <label for="age"><b>Age</b></label>
+                <input type="number" placeholder="Enter your age" name="age" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" name="password" required>
+
+                <label for="confirmPassword"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm your password" name="confirmPassword" required>
+
+                <div class="clearfix">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="toggle-icon" onclick="toggleForm()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M20 6h-4V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v16l4-4h6v-2H8l4 4h4V6zm-8 2a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm0 2a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0 2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        var registrationForm = document.getElementById("registrationForm");
+        var loginForm = document.getElementById("loginForm");
+
+        function toggleForm() {
+            if (registrationForm.style.display === "none") {
+                registrationForm.style.display = "block";
+                loginForm.style.display = "none";
+            } else {
+                registrationForm.style.display = "none";
+                loginForm.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

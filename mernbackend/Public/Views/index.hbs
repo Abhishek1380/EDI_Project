@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Logo"></a>
+            </div>
+            <ul class="nav-items">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Verify Certificate</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li id="app"><a onclick="showPage()" href="#">Partners</a></li>
+            </ul>
+            <div class="buttons">
+                <button class="login"><a href="register">Login / Register</button>
+                <!-- <button class="register">Register</button> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Showcase-top -->
+
+    <div class="showcase-top">
+        <div class="content-showcase">
+            <h1>Making Health Care better together.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, veniam obcaecati architecto placeat
+                sint enim dolore nam commodi molestiae veritatis tenetur non. Voluptatibus amet mollitia odit quo
+                dignissimos enim repellendus illum. Quam, blanditiis laudantium.</p>
+        </div>
+    </div>
+    <div id="container-BMI">
+        <div>
+            <button class="coicon" onclick="closePage()">&times</button>
+        </div>
+        <h1>BMI Calculator</h1>
+        <div>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" step="0.01">
+        </div>
+        <div>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" step="0.01">
+        </div>
+        <button onclick="calculateBMI()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- <div class="section">
+        <div class="sec-1">
+            <div class="image-container">
+                <img src="your-image-url.jpg" alt="Image">
+            </div>
+            <div class="content">
+                <h2>Section Title</h2>
+                <p>This is the content of the section...</p>
+            </div>
+        </div>
+        <div class="sec-2">
+            <div class="content">
+                <h2>Section Title</h2>
+                <p>This is the content of the section...</p>
+            </div>
+            <div class="image-container">
+                <img src="your-image-url.jpg" alt="Image">
+            </div>
+        </div> 
+
+    </div>-->
+
+    <div class="showcase-mid">
+        <div class="sec-1">
+            <div class="image-container">
+                <img src="https://ibb.co/0czVcGf/pexels-thirdman-5327653.jpg" alt="Image 1">
+            </div>
+            <div class="showcase-content">
+                <h2>Vaccination Date Correction</h2>
+                <p>If the date printed on your vaccination certificate differs from the actual date of vaccine
+                    administration, you may raise a request for correction of the same by submitting a valid proof of
+                    correct vaccination date.</p>
+                <button class="nice-sm">Update One</button>
+            </div>
+        </div>
+        <!-- <div class="sec-1">
+
+            <div class="showcase-content">
+                <h2>Section 2 Title</h2>
+                <p>This is the content of section 2...</p>
+            </div>
+
+            <div class="image-container">
+                <img src="/pexels-thirdman-5327653.jpg" alt="Image 2">
+            </div>
+
+
+        </div> -->
+        <div class="sec-3">
+
+            <div class="showcase-content">
+                <h2>Share Your Vaccination Status</h2>
+                <p>Be a Fighter! If you are fully or partially vaccinated, you can now share your vaccination status in
+                    your social circle. Let's encourage our friends and followers in joining India's battle against
+                    COVID-19.
+                </p>
+                <button class="nice-sm">Share status</button>
+            </div>
+            <div class="image-container">
+                <img src="https://ibb.co/2vGdH0y" alt="Image 1">
+            </div>
+
+        </div>
+
+
+
+        <div class="sec-2">
+            <div class="image-container">
+                <img src="/kids.webp" alt="Image 1">
+            </div>
+            <div class="showcase-content">
+                <h2>Children Vaccination</h2>
+                <p>Covovax vaccine is now available for Children of the age group 12+ yrs in Private Vaccination Center.
+                    The time span between first and second dose of Covovax is 21 days. Children can be administered with
+                    the second dose of Covovax within a month.</p>
+                <p>Children of the age group 12-14 yrs are now eligible for the Corbevax vaccine in Government
+                    Vaccination Center and in Private Vaccination Center 12+ yrs. The period between a first and second
+                    dose of Corbevax is 28 days</p>
+                <button class="nice-sm">Update One</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="section-1">
+            <div class="sect-1">
+                <ul>
+                    <li class="Footer-heading">Vaccination Services</li>
+                    <li><a href="#">Register numbers</a></li>
+                    <li><a href="#">Search vaccination centers</a></li>
+                    <li><a href="#">Book Vaccination Slots</a></li>
+                    <li><a href="#">Manage Appointments</a></li>
+                    <li><a href="#">Download Certificate</a></li>
+
+                </ul>
+
+                <ul>
+                    <li class="Footer-heading">Platforms</li>
+                    <li><a href="#">Cowin International</a></li>
+                    <li><a href="#">Vaccinator</a></li>
+                    <li><a href="#">Department Login</a></li>
+                    <li><a href="#">Verify Cerificates</a></li>
+                    <li><a href="#">Vaccination Statistics</a></li>
+                </ul>
+                <ul>
+                    <li class="Footer-heading">Resources</li>
+                    <li><a href="#">How to get vaccinated?</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">EPR compliance</a></li>
+                </ul>
+
+                <ul>
+                    <li class="Footer-heading">Support</li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="sect-2">
+                <div class="sec-2-1">
+                    <p class="Footer-heading">Mail Us:</p>
+                    <p>Flipkart Internet Private Limited,
+
+                        Buildings Alyssa, Begonia &
+
+                        Clove Embassy Tech Village,
+
+                        Outer Ring Road, Devarabeesanahalli Village,
+
+                        Bengaluru, 560103,
+
+                        Karnataka, India
+                    </p>
+
+                </div>
+
+                <div class="sec-2-2">
+                    <p class="Footer-heading">Registerd Office Address</p>
+                    <p>Flipkart Internet Private Limited,
+
+                        Buildings Alyssa, Begonia &
+
+                        Clove Embassy Tech Village,
+
+                        Outer Ring Road, Devarabeesanahalli Village,
+
+                        Bengaluru, 560103,
+
+                        Karnataka, India
+
+                        CIN : U51109KA2012PTC066107
+
+                        Telephone:<a href="#">044-45614700</a></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="sec-21">
+            <div class="fot-2">
+                <div class="fot-1">
+                    <img src="Img/2147425.png" alt="Yess">
+                    <span class="234">Gift Cards</span>
+                </div>
+                <div class="fot-1">
+                    <img src="Img/boot.png" alt="Yess">
+                    <span class="234">advertise</span>
+                </div>
+                <div class="fot-1">
+                    <img src="Img/539321.png" alt="Yess">
+                    <span class="234">Become a seller</span>
+                </div>
+                <div class="fot-1">
+                    <img src="Img/539321.png" alt="Yess">
+                    <span class="234">Help Center</span>
+                </div>
+            </div>
+            <div class="sec-22">
+                <span> @2007-2023 Flipkart.com</span>
+            </div>
+            <div class="sec-222">
+                <img class="Payment" src="Img/Payment.png" alt="yess">
+            </div>
+
+        </div>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // windows.onload = showPage();
+        function showPage() {
+            document.getElementById('container-BMI').style.visibility = 'visible';
+            // document.getElementsByTagName('body').style.opacity = '0.7';
+        }
+        function closePage() {
+            document.getElementById('container-BMI').style.visibility = 'hidden';
+            // document.getElementsByTagName('body').style.opacity = '3';
+        }
+
+        // windows.onload = showBMI();
+        function calculateBMI() {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+
+            if (weight === "" || height === "") {
+                alert("Please enter both weight and height.");
+                return;
+            }
+
+            var bmi = weight / Math.pow(height / 100, 2);
+            bmi = bmi.toFixed(2);
+
+            var result = "Your BMI is " + bmi + ". ";
+
+            if (bmi < 18.5) {
+                result += "You are underweight.";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                result += "You have a normal weight.";
+            } else if (bmi >= 25 && bmi < 30) {
+                result += "You are overweight.";
+            } else {
+                result += "You are obese.";
+            }
+
+            document.getElementById("result").innerHTML = result;
+
+
+            function showBMI() {
+                document.getElementsById('container-BMI').style.visibility = 'visible';
+                // document.getElementsByTagName('body').style.opacity = '0.7';
+            }
+
+            function closeBMI() {
+                document.getElementsById('container-BMI').style.visibility = 'hidden';
+                // document.getElementsByTagName('body').style.opacity = '3';
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+{{!--
+
+https://ibb.co/Cn4csXg
+https://ibb.co/t3HTzBk
+https://ibb.co/0czVcGf
+https://ibb.co/Y3mkTMS
+
+--}}
